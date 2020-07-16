@@ -1,36 +1,11 @@
-/* Сброс стилей */
-/* Указываем box sizing */
+/* сбрасываем стили по умолчанию */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
+/* основные настройки body по умолчанию */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -38,10 +13,20 @@ body {
   line-height: 1.5;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
+/* ul и il очищаем*/
+ul[class], ol[class] {
   list-style: none;
+}
+
+/* внешние отступы */
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, 
+blockquote, dl, dd {
+  margin: 0;
+}
+
+/* внутренние отступы */
+ul[class], ol[class] {
+  padding: 0;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
@@ -49,7 +34,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Упрощаем работу с изображениями */
+/* для картинок */
 img {
   max-width: 100%;
   display: block;
@@ -60,38 +45,35 @@ article > * + * {
   margin-top: 1em;
 }
 
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
+/* шрифты для инпутов и кнопок */
+input, button, textarea, select {
   font: inherit;
 }
-/* end сброс стилей */
-.hidden{
-  /* display: none; */
-}
+
 .bg-main {
   background: #2C2C2C;
 }
-.bg-yellow {
-  background: gold;
-  color: #000;
-  font-size: 12px;
-  border-radius: 5px;
-  padding: 5px;
-}
-.bg-red {
-  background: red;
-  color: #000;
-  font-size: 12px;
-  border-radius: 5px;
-  padding: 5px;
-}
+
 .bg-black {
   background: #000;
   color: #fff;
   border: 2px solid #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bg-yellow {
+  background:#fccd03;
+  color: #000;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bg-red {
+  background: #de0d0b;
+  color: #000;
   font-size: 12px;
   border-radius: 5px;
   padding: 5px;
@@ -102,34 +84,39 @@ select {
 }
 
 .bg-main .top-block .block-wrapper {
-  background: rgba(136, 136, 136, 0.5);
+  background: #454545;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
 }
+
 .bg-main .top-block .block-wrapper .digit {
-  color: #888888;
+  color: #818181;
   font-size: 25px;
   margin-right: 15px;
 }
+
 .bg-main .top-block .block-wrapper .bg-yellow {
   color: #000;
   font-size: 16px;
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: gold;
+  background-color: #f6cb0d;
 }
+
 .bg-main .top-block .block-wrapper .bg-yellow:hover {
   text-decoration: none;
 }
 
+/* таймер */
 .bg-main .clock {
   text-align: center;
   margin-top: 30px;
 }
+
 .bg-main .clock .clocks {
-  color: #888888;
+  color: #7e7e7e;
   font-size: 50px;
   line-height: 1;
 }
@@ -149,32 +136,34 @@ select {
 .bg-main .map-block .map-block-wrapper .common-container {
   display: block;
 }
+
 .bg-main .map-block .map-block-wrapper .common-container .police-wrapper {
   display: flex;
   flex-direction: column;
-  border: 2px solid dodgerblue;
-  border-radius: 10px;
+  border: 2px solid #0398fc;
+  border-radius: 5px;
 }
+
 .bg-main .map-block .map-block-wrapper .common-container .thief-wrapper {
   display: flex;
   flex-direction: column;
-  border: 2px solid gold;
-  border-radius: 10px;
+  border: 2px solid #f6cb0d;
+  border-radius: 5px;
 }
-
 
 .bg-main .map-block .map-block-wrapper .common-container .police-header {
-  background: dodgerblue;
+  background: #0398fc;
   padding: 5px 15px;
 }
+
 .bg-main .map-block .map-block-wrapper .common-container .thief-wrapper .thief-header {
-  background: gold;
-  border: 2px solid gold;
+  background: #f6cb0d;
+  border: 2px solid #f6cb0d;
   padding: 5px 15px;
 }
 
 .bg-main .map-block .map-block-wrapper .common-container .lifes-and-coins {
-  color: #888888;
+  color: #818181;
   display: flex;
   flex-direction: column;
   padding: 5px 15px;
@@ -195,16 +184,19 @@ select {
   margin-right: 0;
   margin-left: auto;
 }
+
 .bg-main .map-block .map-block-wrapper .common-container .police-footer {
-  background: rgba(255, 99, 71, 0.5);
+  background: #650101;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px; 
 }
+
 .bg-main .map-block .map-block-wrapper .common-container .police-footer span {
   margin-right: 15px;
 }
+
 .bg-main .map-block .map-block-wrapper .common-container .police-footer span:last-child {
   margin-right: 0;
 }
@@ -214,19 +206,22 @@ select {
   flex-direction: row;
   margin-top: 30px;
 }
+
 .bg-main .footer-block .btn-border {
   display: block;
-  color: #888888;
+  color: #818181;
   font-size: 16px;
-  border: 2px solid #888888;
+  border: 2px solid #818181;
   padding: 5px 15px;
   border-radius: 5px;
   margin-right: 15px;
 }
+
 .bg-main .footer-block .btn-border.red {
   border: 2px solid #ff0000;
   color: #ff0000;
 }
+
 .bg-main .footer-block .btn-border:hover {
   text-decoration: none;
 }
